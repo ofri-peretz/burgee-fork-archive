@@ -97,20 +97,4 @@ export default [
     files: ['apps/docs/src/lib/source.ts', 'apps/docs/src/mdx-components.tsx'],
     rules: { 'import-next/no-extraneous-dependencies': 'off' },
   },
-  // Dogfooding findings 2–4 (2026-09-05), all on scripts/lint-workflows.ts
-  // (copied verbatim from ofri-peretz/eslint, where these sit at `warn`):
-  //   - no-xpath-injection fires on GitHub Actions annotation strings
-  //     (`::error file=…::msg`) — the `::` is not an XPath axis.
-  //   - no-unlimited-resource-allocation fires on reading a handful of
-  //     workflow files in a loop bounded by a directory listing.
-  //   - no-extraneous-dependencies fires on the `node:process` builtin.
-  // Scoped to the one file; tracked against secure-coding and import-next.
-  {
-    files: ['scripts/lint-workflows.ts'],
-    rules: {
-      'secure-coding/no-xpath-injection': 'off',
-      'secure-coding/no-unlimited-resource-allocation': 'off',
-      'import-next/no-extraneous-dependencies': 'off',
-    },
-  },
 ];
