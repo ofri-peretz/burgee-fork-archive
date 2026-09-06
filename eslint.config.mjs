@@ -85,11 +85,6 @@ export default [
 
   // Resolver noise until a TS-aware import resolver is wired (same as interlace).
   { rules: { 'import-next/no-unresolved': 'off' } },
-  // First dogfooding finding (2026-09-05): `no-missing-null-checks` is not
-  // type-aware and flags `.data` on a call whose return type is non-nullable
-  // (apps/docs/src/lib/source.ts getPageOrNotFound). Off until the rule reads
-  // types; tracked against eslint-plugin-reliability.
-  { rules: { 'reliability/no-missing-null-checks': 'off' } },
   // Two specifiers no package.json can declare: fumadocs' virtual module
   // `fumadocs-mdx:collections/server` and the types-only `mdx/types` (from
   // @types/mdx). Scoped to the two files that import them.
