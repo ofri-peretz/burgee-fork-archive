@@ -1,5 +1,5 @@
-import type { BaseLayoutProps } from 'fumadocs-ui/layouts/shared';
-import { BrandLogo } from '../components/brand';
+import { BrandLogo } from '#/components/brand-logo';
+import { type BaseLayoutProps } from 'fumadocs-ui/layouts/shared';
 
 /**
  * Shared nav for the home and docs layouts. The GitHub link is pushed as an
