@@ -1,5 +1,5 @@
+import { BrandMark } from '#/components/brand-mark';
 import Link from 'next/link';
-import { BrandMark } from '../../components/brand';
 
 /** Hero mark: 4× the nav size, the same locked geometry. */
 const HERO_MARK_SIZE = 96;

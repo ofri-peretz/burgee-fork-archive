@@ -8,7 +8,7 @@
  * theme-paired tokens defined in global.css so the mark follows the theme.
  * The mark is decorative; the adjacent text names the brand.
  */
-import type { ComponentProps } from 'react';
+import { type ComponentProps } from 'react';
 
 export function BrandMark({ size = 22, ...props }: ComponentProps<'svg'> & { size?: number }) {
   return (
@@ -26,15 +26,5 @@ export function BrandMark({ size = 22, ...props }: ComponentProps<'svg'> & { siz
         <rect x="28" y="54" width="62" height="28" rx="14" fill="var(--brand-mark-bar-g)" />
       </g>
     </svg>
-  );
-}
-
-export function BrandLogo({ markSize = 22 }: { markSize?: number }) {
-  return (
-    <span data-slot="brand-logo" className="inline-flex items-center gap-2.5">
-      <BrandMark size={markSize} />
-      <span className="font-mono font-semibold lowercase tracking-tight">interlace</span>
-      <span className="font-semibold text-fd-muted-foreground">cli</span>
-    </span>
   );
 }
